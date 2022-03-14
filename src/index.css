@@ -1,0 +1,54 @@
+html {
+  margin: 0;
+  font-size: x-small;
+}
+
+.listinput {
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0);
+  width: 90%;
+  background: transparent;
+  text-align: center;
+  outline: none;
+}
+
+.listinput:hover,
+.listinput:hover {
+  background-color: rgba(148, 120, 189, 0.28);
+  /* border: 2px solid rgba(193, 178, 214, 0.4);
+  border-radius: 4px; */
+}
+
+.title {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  border: 0;
+}
+
+[data-customtooltip] {
+  cursor: pointer;
+  position: relative;
+}
+
+[data-customtooltip]::after {
+  background: var(--gradient-1);
+  color: white;
+  font-size: var(--font-size-1);
+  padding: 0.5em 2em;
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  text-align: center;
+  bottom: 250%;
+  left: 105%;
+  content: attr(data-customTooltip);
+  transform: translate(-50%, 110%) scale(0);
+  transform-origin: top;
+  transition: transform 100ms var(--ease-2);
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 1), 0 0 0 1px rgba(0, 0, 0, 1);
+}
+[data-customTooltip]:hover:after {
+  display: block;
+  transform: translate(-50%, 110%) scale(1);
+}
