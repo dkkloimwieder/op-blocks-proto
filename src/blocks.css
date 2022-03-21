@@ -12,6 +12,9 @@
     );
     --surface-1: var(--gray-1);
     --surface-2: var(--gray-4);
+    --text-1: var(--gray-9);
+    --text-2: var(--gray-7);
+    --text-link: hsl(250, 100%, 60%);
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -23,8 +26,11 @@
     );
     --surface-1: var(--gray-8);
     --surface-2: var(--gray-9);
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-4);
     --shadow-strength: 25%;
     --shadow-color: 220 40% 2%;
+    --text-link: hsl(250, 100%, 70%);
   }
 }
 
@@ -62,6 +68,7 @@ section.card-one {
     overflow: hidden;
 
     & > .cap {
+      /* background-image: url(./svg/noise.svg); */
       background: var(--gradient-l1);
       padding-block: var(--size-4);
       h1,
@@ -72,6 +79,8 @@ section.card-one {
       h6 {
         text-align: center;
         color: var(--text-1);
+        font-weight: bold;
+        font-size: var(--size-5);
         text-shadow: 0px 0px 1.5em var(--surface-1);
       }
     }
@@ -80,18 +89,21 @@ section.card-one {
       padding: var(--size-3);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      gap: var(--size-2);
+
       h1,
       h2,
       h3,
       h4,
       h5,
-      h6 {
+      h6,
+      p {
         color: var(--text-1);
+        font-size: var(--size-3);
+        margin-block: var(--size-3);
       }
       & a {
         text-decoration: none;
+        color: var(--text-link);
       }
     }
   }

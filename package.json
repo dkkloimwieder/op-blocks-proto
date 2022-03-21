@@ -10,6 +10,10 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-solid": "^0.4.4",
     "postcss": "^8.4.8",
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "postcss-import": "^14.0.2",
@@ -22,6 +26,8 @@
     "rollup-plugin-styles": "^4.0.0",
     "typescript": "^4.6.2",
     "vite": "^2.8.6",
+    "vite-plugin-eslint": "^1.3.0",
+    "vite-plugin-singlefile": "^0.7.1",
     "vite-plugin-solid": "^2.2.6"
   },
   "dependencies": {
