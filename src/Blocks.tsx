@@ -5,7 +5,7 @@ const Blocks: Component = () => {
     const consonants = "bcdfghjklmnpqrstvwxzy".split("");
     const vowels = "aaeeeiioouuy".split("");
     const max = Math.floor(Math.random() * maxWords) + 3;
-    let word: string = "";
+    let word = "";
 
     for (let i = 0; i < max / 2; i++) {
       const randConsonant =
@@ -26,7 +26,7 @@ const Blocks: Component = () => {
     return word;
   };
   const randomWords = (maxWords: number, maxLength: number) => {
-    let words: string = "";
+    let words = "";
     const length = Math.floor(Math.random() * maxLength) + 1;
     for (let i = 0; i < length; i++) {
       words +=
