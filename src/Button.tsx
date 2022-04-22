@@ -1,3 +1,5 @@
+import { createSignal } from 'solid-js'
+
 import Slot from './Slot'
 
 
@@ -18,11 +20,13 @@ const Display = (props) => {
 }
 const Button = () => {
     return(
-        <Slot color='red'>
+        <>
+        <Slot color='red' slottable class="helo">
             <Display stlye={{color:'blue'}}>Hello</Display>
             <Display>World</Display>
            
         </Slot>
+        </>
     )
 }
 

@@ -1,17 +1,17 @@
-const postcssJitProps = require("postcss-jit-props");
-const postcssImport = require("postcss-import");
-const postcssCombineDuplicatedSelectors = require("postcss-combine-duplicated-selectors");
-const postcssPresetEnv = require("postcss-preset-env");
-const postcssNested = require("postcss-nested");
+//  const postcssJitProps = require("postcss-jit-props");
+// const postcssImport = require("postcss-import");
+// const postcssCombineDuplicatedSelectors = require("postcss-combine-duplicated-selectors");
+// const postcssPresetEnv = require("postcss-preset-env");
+// const postcssNested = require("postcss-nested");
 const openProps = require("open-props");
 
-module.exports = {
-  plugins: [
-    postcssJitProps(openProps),
-    postcssImport(),
-    postcssNested(),
-    postcssCombineDuplicatedSelectors(),
-    postcssPresetEnv({
+module.exports = ()  => ({
+  plugins: {
+    'postcss-jit-props': require('open-props'),
+    'postcss-import': {},
+    'postcss-nested': {},
+    // 'postcss-CombineDuplicatedSelectors': {},
+    'postcss-preset-env':{
       stage: 0,
       features: {
         "logical-properties-and-values": false,
@@ -24,6 +24,6 @@ module.exports = {
         "focus-within-pseudo-class": false,
         "color-functional-notation": false,
       },
-    }),
-  ],
-};
+    }
+},  
+})
